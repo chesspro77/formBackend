@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-astro-cid-sckkx6r4>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="generator" content="Astro v5.15.3">
+    <title>Astro Basics</title>
+    <link rel="stylesheet" href="/_astro/index.qzXqN_dH.css">
+</head>
+
+<body data-astro-cid-sckkx6r4>
+    <div class="bg-white py-16 px-4 flex items-center justify-center">
+        <div class="container mx-auto max-w-3xl"> <!-- Header -->
+            <div class="text-center mb-10">
+                <hr class="border-t border-black w-16 mx-auto mb-4">
+                <h1 class="text-3xl sm:text-4xl font-bold text-black">
+                    Get a Quote - Safe Deposit Box
+                </h1>
+                <p class="text-gray-700 mt-2 text-sm sm:text-base">
+                    STARVAULT office is open Mon to Fri (8:30am - 12:00pm and 1:00pm
+                    - 6:00pm)<br>
+                    Saturday by appointment only<br>
+                    24 hours Vault Access
+                </p>
+            </div> <!-- Form -->
+            <div class="bg-white border border-gray-200 rounded-2xl shadow-md p-8 sm:p-10">
+                <form class="space-y-5" novalidate> <!-- First Name -->
+                    <div> <label for="firstName" class="block mb-1 font-semibold text-black">
+                            First Name <span class="text-gray-500">*</span> </label> <input type="text" id="firstName"
+                            name="firstName" placeholder="Enter your first name"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-black transition-colors"
+                            required> </div> <!-- Last Name -->
+                    <div> <label for="lastName" class="block mb-1 font-semibold text-black">
+                            Last Name / Surname <span class="text-gray-500">*</span> </label> <input type="text"
+                            id="lastName" name="lastName" placeholder="Enter your last name"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-black transition-colors"
+                            required> </div> <!-- E-mail -->
+                    <div> <label for="email" class="block mb-1 font-semibold text-black">
+                            E-mail <span class="text-gray-500">*</span> </label> <input type="email" id="email"
+                            name="email" placeholder="Enter your email"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-black transition-colors"
+                            required> </div> <!-- Phone -->
+                    <div> <label for="phone" class="block mb-1 font-semibold text-black">
+                            Phone Number <span class="text-gray-500">*</span> </label> <input type="number" id="phone"
+                            name="phone" placeholder="Enter your phone number"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-black transition-colors"
+                            required> </div> <!-- Contact Preference -->
+                    <div> <label class="block mb-1 font-semibold text-black">
+                            Preferred Contact Method <span class="text-gray-500">*</span> </label>
+                        <div class="space-y-2"> <label class="inline-flex items-center"> <input type="radio"
+                                    name="contactMethod" value="Call" class="mr-2" required> Call
+                            </label> <label class="inline-flex items-center ml-4"> <input type="radio"
+                                    name="contactMethod" value="Email" class="mr-2" required> Email
+                            </label> <label class="inline-flex items-center ml-4"> <input type="radio"
+                                    name="contactMethod" value="Whatsapp msg" class="mr-2" required> Whatsapp msg
+                            </label> </div>
+                    </div> <!-- Box Size -->
+                    <div> <label for="boxSize" class="block mb-1 font-semibold text-black">
+                            Box Size <span class="text-gray-500">*</span> </label> <select id="boxSize" name="boxSize"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:outline-none focus:border-black transition-colors"
+                            required>
+                            <option value="" disabled selected>Choose Box Size</option>
+                            <option>Small (83mmH x 235mmW x 325mmD)</option>
+                            <option>Medium (152mmH x 235mmW x 325mmD)</option>
+                        </select> </div> <!-- Duration -->
+                    <div> <label for="duration" class="block mb-1 font-semibold text-black">
+                            Duration <span class="text-gray-500">*</span> </label> <select id="duration" name="duration"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:outline-none focus:border-black transition-colors"
+                            required>
+                            <option value="" disabled selected>Select Duration</option>
+                            <option>Monthly payment plan</option>
+                            <option>1 year prepay plan</option>
+                            <option>3 year prepay plan</option>
+                        </select> </div> <!-- Referral -->
+                    <div> <label for="referral" class="block mb-1 font-semibold text-black">
+                            How did you hear about us? <span class="text-gray-500">*</span> </label> <select
+                            id="referral" name="referral"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:outline-none focus:border-black transition-colors"
+                            required>
+                            <option value="" disabled selected>Select Option</option>
+                            <option>Referral</option>
+                            <option>Boxpark Tenant</option>
+                            <option>Facebook</option>
+                            <option>Google</option>
+                            <option>Banner</option>
+                            <option>Others</option>
+                        </select> </div> <!-- Additional Information -->
+                    <div> <label for="additionalInfo" class="block mb-1 font-semibold text-black">
+                            Additional Information
+                        </label> <textarea id="additionalInfo" name="additionalInfo"
+                            placeholder="Additional Information" rows="3"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-black transition-colors"></textarea>
+                    </div> <!-- Submit --> <button type="submit"
+                        class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors">
+                        Get Quote for Safe Deposit Box
+                    </button>
+                    <p class="text-xs text-gray-500 mt-2 text-center">
+                        *These fields are compulsory
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        const form = document.querySelector("form");
+
+        // Tambahkan elemen <p> untuk error di JS tanpa mengubah HTML
+        const addErrorElement = (input) => {
+            let error = document.createElement("p");
+            error.className = "text-red-500 text-sm mt-1 hidden";
+            error.textContent = "Required data";
+            input.insertAdjacentElement("afterend", error);
+            return error;
+        };
+
+        // Ambil semua input, select, textarea dan radio wajib
+        const requiredFields = [
+            "firstName",
+            "lastName",
+            "email",
+            "phone",
+            "contactMethod",
+            "boxSize",
+            "duration",
+            "referral",
+        ];
+
+        // Simpan reference ke elemen error
+        const errorMap = {};
+
+        requiredFields.forEach((id) => {
+            if (id === "contactMethod") {
+                // radio
+                const radios = document.querySelectorAll(
+                    `input[name="contactMethod"]`,
+                );
+                errorMap[id] = addErrorElement(
+                    radios[radios.length - 1].parentElement,
+                );
+            } else {
+                const el = document.getElementById(id);
+                errorMap[id] = addErrorElement(el);
+            }
+        });
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let valid = true;
+
+            // Cek setiap field wajib
+            requiredFields.forEach((id) => {
+                let value = "";
+                if (id === "contactMethod") {
+                    value =
+                        document.querySelector(
+                            'input[name="contactMethod"]:checked',
+                        )?.value || "";
+                } else {
+                    value = document.getElementById(id).value.trim();
+                }
+
+                if (!value) {
+                    errorMap[id].classList.remove("hidden");
+                    valid = false;
+                } else {
+                    errorMap[id].classList.add("hidden");
+                }
+            });
+
+            if (valid) {
+                // Ambil data form
+                const formData = {
+                    firstName: document.getElementById("firstName").value,
+                    lastName: document.getElementById("lastName").value,
+                    email: document.getElementById("email").value,
+                    phone: document.getElementById("phone").value,
+                    contactMethod:
+                        document.querySelector(
+                            'input[name="contactMethod"]:checked',
+                        ).value || "",
+                    boxSize: document.getElementById("boxSize").value,
+                    duration: document.getElementById("duration").value,
+                    referral: document.getElementById("referral").value,
+                    additionalInfo: document.getElementById("additionalInfo").value,
+                };
+
+                // console.log(formData);
+                // console.log(JSON.stringify(formData, null, 2));
+                fetch("http://localhost:8080/api/box", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                })
+                    .then((response) => response.json())
+                    .then((result) => {
+                        window.location.href = "http://localhost:8080/list-data";
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        alert("Failed to create box request");
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>

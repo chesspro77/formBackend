@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.15.3"><title>Astro Basics</title><link rel="stylesheet" href="/_astro/index.qzXqN_dH.css"></head> <body data-astro-cid-sckkx6r4>  <h1 class="text-3xl font-bold mb-6 text-center">Box Deposit List</h1>  <div class="flex justify-center mb-8"> <button id="download-btn" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow-md">
+Convert Data to Excel
+</button> </div>  <div class="overflow-x-auto"> <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md"> <thead class="bg-blue-600 text-white"> <tr> <th class="px-4 py-2 text-left">Name</th> <th class="px-4 py-2 text-left">Email</th> <th class="px-4 py-2 text-left">Phone</th> <th class="px-4 py-2 text-left">Contact Method</th> <th class="px-4 py-2 text-left">Box Size</th> <th class="px-4 py-2 text-left">Duration</th> <th class="px-4 py-2 text-left">Referral</th> <th class="px-4 py-2 text-left">Additional Info</th> </tr> </thead> <tbody id="box-list" class="divide-y divide-gray-200"> <tr> <td colspan="8" class="text-center py-4">Loading data...</td> </tr> </tbody> </table> </div> <script type="module">
+        const boxList = document.getElementById("box-list");
+
+        // Fetch JSON data from backend
+        async function fetchBoxData() {
+            try {
+                const response = await fetch("http://localhost:8080/api/box");
+                if (!response.ok)
+                    throw new Error("Network response was not ok");
+
+                const data = await response.json();
+
+                // Clear placeholder
+                boxList.innerHTML = "";
+
+                // Render each item as a table row
+                data.forEach((item) => {
+                    const tr = document.createElement("tr");
+
+                    tr.innerHTML = `
+            <td class="px-4 py-2">${item.firstName} ${item.lastName}</td>
+            <td class="px-4 py-2">${item.email}</td>
+            <td class="px-4 py-2">${item.phone}</td>
+            <td class="px-4 py-2">${item.contactMethod}</td>
+            <td class="px-4 py-2">${item.boxSize}</td>
+            <td class="px-4 py-2">${item.duration}</td>
+            <td class="px-4 py-2">${item.referral}</td>
+            <td class="px-4 py-2">${item.additionalInfo}</td>
+          `;
+
+                    boxList.appendChild(tr);
+                });
+            } catch (error) {
+                console.error("Fetch failed:", error);
+                boxList.innerHTML =
+                    "<tr><td colspan='8' class='text-red-600 text-center py-4'>Failed to load data.</td></tr>";
+            }
+        }
+
+        fetchBoxData();
+
+        // Keep your original Excel download function intact
+        const button = document.getElementById("download-btn");
+        button.addEventListener("click", () => {
+            const downloadUrl = "http://localhost:8080/download-excel";
+            window.location.href = downloadUrl;
+        });
+    </script>  </body></html>
